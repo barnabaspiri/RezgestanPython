@@ -26,4 +26,5 @@ A segédletet készítették:
 - Juhos-Kiss Álmos (Alkalmazott Mechanika Szakosztály)
 
 - Csuzdi Domonkos (Alkalmazott Mechanika Szakosztály)
+
 </sub>
