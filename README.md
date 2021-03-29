@@ -1,5 +1,3 @@
-Teszt, beleírtam
-
 # Python segédlet rezgéstani példákon keresztül
 A BME Gépészmérnöki karán a Műszaki Mechanikai Tanszék által oktatott Rezgéstan c. tárgy (2020/21/2) gyakorlati anyaga kidolgozva Python nyelven.
 
