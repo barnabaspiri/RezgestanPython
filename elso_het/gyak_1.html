@@ -14323,11 +14323,9 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A leejtett $m_1$ tömegű test sebességének meghatározása az ütközés pillanata előtt, a munkatétel szerint:
-$$T_1 - T_0 = W_{01},$$</p>
-<p>ahol $T_0$ a kezdeti kinetikus energia, $T_1$ pedig az ütközés pillanatában a kinetikus energia, $W_{01}$ a mechanikai munka, amit a gravitációs erőtér végez. Mivel az $m_1$ tömegű testet 0 kezdősebességgel ejtettük le: $T_0 = 0.$
-$$\dfrac{1}{2} m_1 c_1^2 = m_1 g h \longrightarrow c_1 = \sqrt{2 g h}.$$</p>
-
+<p>A leejtett $m_1$ tömegű test sebességének meghatározása az ütközés pillanata előtt, a munkatétel szerint:</p>
+$$T_1 - T_0 = W_{01},$$<p>ahol $T_0$ a kezdeti kinetikus energia, $T_1$ pedig az ütközés pillanatában a kinetikus energia, $W_{01}$ a mechanikai munka, amit a gravitációs erőtér végez. Mivel az $m_1$ tömegű testet 0 kezdősebességgel ejtettük le: $T_0 = 0.$</p>
+$$\dfrac{1}{2} m_1 c_1^2 = m_1 g h \longrightarrow c_1 = \sqrt{2 g h}.$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14338,8 +14336,8 @@ $$\dfrac{1}{2} m_1 c_1^2 = m_1 g h \longrightarrow c_1 = \sqrt{2 g h}.$$</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>                               <span class="c1">#1</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_1 = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_1</span><span class="p">))))</span>    <span class="c1">#2</span>
 
-<span class="n">c_1_num</span> <span class="o">=</span> <span class="n">c_1</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m/s-ban       #3 .subs(adatok): behelyettesítés, .evalf(2): kiértékelés 2 tizedesjegyre</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_1 = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1_num</span><span class="p">)))</span>          <span class="c1">#4</span>
+<span class="n">c_1_num</span> <span class="o">=</span> <span class="n">c_1</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                <span class="c1">#3 `.subs(adatok)`: behelyettesítés, `.evalf(2)`: kiértékelés 2 tizedesjegyre</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_1 = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1_num</span><span class="p">)))</span>  <span class="c1">#4</span>
 
 <span class="n">c_1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_1&quot;</span><span class="p">)</span>                            <span class="c1">#5</span>
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_1</span><span class="p">,</span><span class="n">c_1_num</span><span class="p">))</span>                       <span class="c1">#6</span>
@@ -14386,7 +14384,7 @@ $\displaystyle c_1 = \sqrt{2} \sqrt{g h}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_1 = 1.5$
+$\displaystyle c_1 = 1.5\ \text{m/s}$
 </div>
 
 </div>
@@ -14408,9 +14406,8 @@ $\displaystyle c_1 = 1.5$
 <li>Kijelöljük az ütközési normálist.</li>
 <li>"$A$" pontból (elforduló tengely) merőlegest állítunk $\textbf{n}$ ütközési normálisra</li>
 </ol>
-<p>Szükség van a talppont és az álló tengely közötti távolságra, amely: 
-$$l = \overline{AT} = a cos(\beta).$$</p>
-
+<p>Szükség van a talppont és az álló tengely közötti távolságra, amely:</p>
+$$l = \overline{AT} = a\ \textrm{cos}(\beta).$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14422,7 +14419,7 @@ $$l = \overline{AT} = a cos(\beta).$$</p>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;l = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">l</span><span class="p">))))</span>
 
 <span class="n">l_num</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m-ben</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;l = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l_num</span><span class="p">)))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;l = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l_num</span><span class="p">)))</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;l&quot;</span><span class="p">)</span>
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">l</span><span class="p">,</span><span class="n">l_num</span><span class="p">))</span>
@@ -14461,7 +14458,7 @@ $\displaystyle l = a \cos{\left(β \right)}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle l = 0.15$
+$\displaystyle l = 0.15\ \text{m}$
 </div>
 
 </div>
@@ -14473,9 +14470,8 @@ $\displaystyle l = 0.15$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A redukált tömeg kiszámításához szükség van a tehetetlenségi nyomatékra, amely az $A$ pontra számolva:
-$$\theta_{\textrm{A}} = \theta_{\textrm{S}} + \theta_{\textrm{AS}} = \dfrac{1}{12} m_2 (3a)^2 + m_2 \left(\dfrac{3}{2} a - a\right).$$</p>
-
+<p>A redukált tömeg kiszámításához szükség van a tehetetlenségi nyomatékra, amely az $A$ pontra számolva:</p>
+$$\theta_{\textrm{A}} = \theta_{\textrm{S}} + \theta_{\textrm{AS}} = \dfrac{1}{12} m_2 (3a)^2 + m_2 \left(\dfrac{3}{2} a - a\right).$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14483,14 +14479,14 @@ $$\theta_{\textrm{A}} = \theta_{\textrm{S}} + \theta_{\textrm{AS}} = \dfrac{1}{1
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">θ_A</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">12</span><span class="o">*</span><span class="n">m_2</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m_2</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">θ_A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="n">m_2</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m_2</span><span class="o">*</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">theta_A = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">θ_A</span><span class="p">))))</span> <span class="c1"># \theta_A nem elég, kettő \\ kell, mivel &#39;\t&#39;-t a Python külön értelmezi</span>
                                                       <span class="c1"># + egyből egyszerűsíti a fent látható kifejezést</span>
     
 <span class="n">θ_A_num</span> <span class="o">=</span> <span class="n">θ_A</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">theta_A = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">θ_A_num</span><span class="p">)))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">theta_A = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{kgm$^2$}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">θ_A_num</span><span class="p">)))</span>
 
-<span class="n">θ_A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;θ_A&quot;</span><span class="p">)</span> <span class="c1">#kgm^2-ben</span>
+<span class="n">θ_A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;θ_A&quot;</span><span class="p">)</span>
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">θ_A</span><span class="p">,</span><span class="n">θ_A_num</span><span class="p">))</span>
 </pre></div>
 
@@ -14513,7 +14509,7 @@ $$\theta_{\textrm{A}} = \theta_{\textrm{S}} + \theta_{\textrm{AS}} = \dfrac{1}{1
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle \theta_A = 1.0 a^{2} m_{2}$
+$\displaystyle \theta_A = a^{2} m_{2}$
 </div>
 
 </div>
@@ -14527,7 +14523,7 @@ $\displaystyle \theta_A = 1.0 a^{2} m_{2}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle \theta_A = 0.54$
+$\displaystyle \theta_A = 0.54\ \text{kgm$^2$}$
 </div>
 
 </div>
@@ -14539,9 +14535,8 @@ $\displaystyle \theta_A = 0.54$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Így a redukált tömeg számítható: 
-$$m_{\textrm{T}} = \dfrac{\theta_{\textrm{A}}}{l^2}.$$</p>
-
+<p>Így a redukált tömeg számítható:</p>
+$$m_{\textrm{T}} = \dfrac{\theta_{\textrm{A}}}{l^2}.$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14552,8 +14547,8 @@ $$m_{\textrm{T}} = \dfrac{\theta_{\textrm{A}}}{l^2}.$$</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">m_T</span> <span class="o">=</span> <span class="n">θ_A</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;m_T = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">m_T</span><span class="p">))))</span> 
     
-<span class="n">m_T_num</span> <span class="o">=</span> <span class="n">m_T</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#kg-ban</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;m_T = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m_T_num</span><span class="p">)))</span>
+<span class="n">m_T_num</span> <span class="o">=</span> <span class="n">m_T</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;m_T = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{kg}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m_T_num</span><span class="p">)))</span>
 
 <span class="n">m_T</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;m_T&quot;</span><span class="p">)</span> 
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">m_T</span><span class="p">,</span><span class="n">m_T_num</span><span class="p">))</span>
@@ -14592,7 +14587,7 @@ $\displaystyle m_T = \frac{θ_{A}}{l^{2}}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle m_T = 24$
+$\displaystyle m_T = 24\ \text{kg}$
 </div>
 
 </div>
@@ -14604,7 +14599,7 @@ $\displaystyle m_T = 24$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A golyó mozgásállapota az ütközés előtt: $[\mathbf{\Omega}_1; \mathbf{c}_1] = [\mathbf{0};-1,5\mathbf{j}\ [m/s]]$, ahol $\mathbf{j}$ jelöli az y irányú egységvektort.</p>
+<p>A golyó mozgásállapota az ütközés előtt: $[\mathbf{\Omega}_1; \mathbf{c}_1] = [\mathbf{0};-1,5\mathbf{j}\ $[m/s]$ ]$, ahol $\mathbf{j}$ jelöli az y irányú egységvektort.</p>
 <p>A rúd mozgásállapota az ütközés előtt: $[\mathbf{\Omega}_2; \mathbf{c}_{\textrm{Tn}}] = [\mathbf{0};\mathbf{0}]$, mivel a rúd az ütközés pillanata előtt nyugalomban van.</p>
 
 </div>
@@ -14637,7 +14632,7 @@ $\displaystyle m_T = 24$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$c_{1\textrm{n}} = c_1 cos(\beta),$$$$c_{1\textrm{t}} = c_1 sin(\beta).$$
+$$c_{1\textrm{n}} = c_1\ \textrm{cos}(\beta),$$$$c_{1\textrm{t}} = c_1\ \textrm{sin}(\beta).$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14648,8 +14643,8 @@ $$c_{1\textrm{n}} = c_1 cos(\beta),$$$$c_{1\textrm{t}} = c_1 sin(\beta).$$
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_1n</span> <span class="o">=</span> <span class="n">c_1</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">β</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1n}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_1n</span><span class="p">))))</span>
 
-<span class="n">c_1n_num</span> <span class="o">=</span> <span class="n">c_1n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m/s-ban</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1n}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1n_num</span><span class="p">)))</span>
+<span class="n">c_1n_num</span> <span class="o">=</span> <span class="n">c_1n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1n}} = </span><span class="si">{}</span><span class="s1"> \ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1n_num</span><span class="p">)))</span>
 
 <span class="n">c_1n</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_1n&quot;</span><span class="p">)</span> 
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_1n</span><span class="p">,</span><span class="n">c_1n_num</span><span class="p">))</span>
@@ -14688,7 +14683,7 @@ $\displaystyle c_{1n} = c_{1} \cos{\left(β \right)}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{1n} = 0.75$
+$\displaystyle c_{1n} = 0.75 \ \text{m/s}$
 </div>
 
 </div>
@@ -14706,8 +14701,8 @@ $\displaystyle c_{1n} = 0.75$
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_1t</span> <span class="o">=</span> <span class="n">c_1</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">β</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1t}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_1t</span><span class="p">))))</span>
 
-<span class="n">c_1t_num</span> <span class="o">=</span> <span class="n">c_1t</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m/s-ban</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1t}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1t_num</span><span class="p">)))</span>
+<span class="n">c_1t_num</span> <span class="o">=</span> <span class="n">c_1t</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{1t}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c_1t_num</span><span class="p">)))</span>
 
 <span class="n">c_1t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_1t&quot;</span><span class="p">)</span> 
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_1t</span><span class="p">,</span><span class="n">c_1t_num</span><span class="p">))</span>
@@ -14746,7 +14741,7 @@ $\displaystyle c_{1t} = c_{1} \sin{\left(β \right)}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{1t} = 1.3$
+$\displaystyle c_{1t} = 1.3\ \text{m/s}$
 </div>
 
 </div>
@@ -14771,8 +14766,8 @@ $\displaystyle c_{1t} = 1.3$
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_Sn</span> <span class="o">=</span> <span class="p">(</span><span class="n">m_1</span><span class="o">*</span><span class="n">c_1n</span> <span class="o">+</span> <span class="n">m_T</span><span class="o">*</span><span class="n">c_Tn</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">m_1</span> <span class="o">+</span> <span class="n">m_T</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{Sn}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_Sn</span><span class="p">))))</span>
 
-<span class="n">c_Sn_num</span> <span class="o">=</span> <span class="n">c_Sn</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m/s-ban</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{Sn}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_Sn_num</span><span class="p">))))</span>
+<span class="n">c_Sn_num</span> <span class="o">=</span> <span class="n">c_Sn</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;c_{{Sn}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">c_Sn_num</span><span class="p">))))</span>
 
 <span class="n">c_Sn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;c_Sn&quot;</span><span class="p">)</span> 
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c_Sn</span><span class="p">,</span><span class="n">c_Sn_num</span><span class="p">))</span>
@@ -14811,7 +14806,7 @@ $\displaystyle c_{Sn} = \frac{c_{1n} m_{1} + c_{Tn} m_{T}}{m_{1} + m_{T}}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle c_{Sn} = 0.15$
+$\displaystyle c_{Sn} = 0.15\ \text{m/s}$
 </div>
 
 </div>
@@ -14830,8 +14825,7 @@ $\displaystyle c_{Sn} = 0.15$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>A Maxwell diagram megszerkesztésének folyamatát mutatja a fenti ábra. Először (a) az $\textrm{O}_1$ és $\textrm{O}_{\textrm{T}}$ pontokban párhuzamos egyeneseket húzunk az ütközési normálissal, valamint berajzoljuk a testek normális irányú, ütközés előtti sebességeit. Mivel a rúd az ütközés előtt nyugalomban volt, így annak ütközés előtti sebessége zérus. Ezt követően összekötjük a sebességvektorok végpontjait, majd megállapítjuk a közös súlypont helyét a golyó tömegének és a rúd redukált tömegének segítségével az $\frac{\overline{\textrm{SM}_{\textrm{T}}}}{\overline{\textrm{SM}_{\textrm{1}}}} = \frac{m_1}{m_{\textrm{T}}}$ arány felhasználásával. A közös súlypontnak a normális irányú egyenesekre eső merőleges vetületei alapján megállapíthatjuk a $\Delta_1$ és $\Delta_{\textrm{T}}$ 'távolságokat' (b), amik ahhoz a sebességváltozáshoz tartoznak, amikor az ütközésben részt vevő testek elérik a közös súlypont sebességét. Az $e$ ütközési tényező felhasználásával megállapíthatjuk az ütközés utáni ütközési normális irányú sebességeket, mégpedig $e\Delta_1$ és $e\Delta_{\textrm{T}}$-t mérve a $\textrm{P}_1\textrm{P}_{\textrm{T}}$ egyenes túloldalára (c). A golyó ütközés utáni normális irányú sebességét az $\overline{\textrm{O}_1\textrm{Q}_1}$, a rúdét az $\overline{\textrm{O}_{\textrm{T}}\textrm{Q}_{\textrm{T}}}$ adja.</p>
 <p>Ezek alapján az ütközés utáni normális irányú sebességkomponensek</p>
-$$v_{1\textrm{n}} = c_{\textrm{Sn}} - e\Delta_1 = c_{\textrm{Sn}} - e(c_{\textrm{1n}} - c_{\textrm{Sn}}),\\
-v_{\textrm{Tn}} = c_{\textrm{Sn}} - e\Delta_{\textrm{T}} = (1+e)c_{\textrm{Sn}}, $$
+$$v_{1\textrm{n}} = c_{\textrm{Sn}} - e\Delta_1 = c_{\textrm{Sn}} - e(c_{\textrm{1n}} - c_{\textrm{Sn}}),$$$$v_{\textrm{Tn}} = c_{\textrm{Sn}} - e\Delta_{\textrm{T}} = (1+e)c_{\textrm{Sn}}, $$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14842,8 +14836,8 @@ v_{\textrm{Tn}} = c_{\textrm{Sn}} - e\Delta_{\textrm{T}} = (1+e)c_{\textrm{Sn}},
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_1n</span> <span class="o">=</span> <span class="n">c_Sn</span> <span class="o">-</span> <span class="n">e</span><span class="o">*</span><span class="p">(</span><span class="n">c_1n</span> <span class="o">-</span> <span class="n">c_Sn</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{1n}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_1n</span><span class="p">))))</span>
 
-<span class="n">v_1n_num</span> <span class="o">=</span> <span class="n">v_1n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m/s-ben</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{1n}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_1n_num</span><span class="p">))))</span>
+<span class="n">v_1n_num</span> <span class="o">=</span> <span class="n">v_1n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{1n}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_1n_num</span><span class="p">))))</span>
 
 <span class="n">v_1n</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;v_1n&quot;</span><span class="p">)</span> 
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v_1n</span><span class="p">,</span><span class="n">v_1n_num</span><span class="p">))</span>
@@ -14851,8 +14845,8 @@ v_{\textrm{Tn}} = c_{\textrm{Sn}} - e\Delta_{\textrm{T}} = (1+e)c_{\textrm{Sn}},
 <span class="n">v_Tn</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span><span class="o">*</span><span class="n">c_Sn</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{Tn}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_Tn</span><span class="p">))))</span>
 
-<span class="n">v_Tn_num</span> <span class="o">=</span> <span class="n">v_Tn</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#m/s-ben</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{Tn}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_Tn_num</span><span class="p">))))</span>
+<span class="n">v_Tn_num</span> <span class="o">=</span> <span class="n">v_Tn</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;v_{{Tn}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">v_Tn_num</span><span class="p">))))</span>
 
 <span class="n">v_Tn</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;v_Tn&quot;</span><span class="p">)</span> 
 <span class="n">adatok</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">v_Tn</span><span class="p">,</span><span class="n">v_Tn_num</span><span class="p">))</span>
@@ -14891,7 +14885,7 @@ $\displaystyle v_{1n} = c_{Sn} - e \left(c_{1n} - c_{Sn}\right)$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle v_{1n} = -0.45$
+$\displaystyle v_{1n} = -0.45\ \text{m/s}$
 </div>
 
 </div>
@@ -14919,7 +14913,7 @@ $\displaystyle v_{Tn} = c_{Sn} \left(e + 1\right)$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle v_{Tn} = 0.3$
+$\displaystyle v_{Tn} = 0.3\ \text{m/s}$
 </div>
 
 </div>
@@ -14950,8 +14944,8 @@ $$\omega_2 = \frac{v_{\textrm{Tn}}}{l}.$$
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ω_2</span> <span class="o">=</span> <span class="n">v_Tn</span> <span class="o">/</span> <span class="n">l</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{2}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_2</span><span class="p">))))</span>
 
-<span class="n">ω_2_num</span> <span class="o">=</span> <span class="n">ω_2</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#rad/s-ben</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{2}} = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_2_num</span><span class="p">))))</span>
+<span class="n">ω_2_num</span> <span class="o">=</span> <span class="n">ω_2</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">adatok</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">&#39;ω_{{2}} = </span><span class="si">{}</span><span class="s1">\ </span><span class="se">\\</span><span class="s1">text{{rad/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">ω_2_num</span><span class="p">))))</span>
 </pre></div>
 
      </div>
@@ -14987,7 +14981,7 @@ $\displaystyle ω_{2} = \frac{v_{Tn}}{l}$
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output " data-mime-type="text/latex">
-$\displaystyle ω_{2} = 2.0$
+$\displaystyle ω_{2} = 2.0\ \text{rad/s}$
 </div>
 
 </div>
@@ -15001,6 +14995,20 @@ $\displaystyle ω_{2} = 2.0$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Így a rúd ütközés utáni szögsebessége</p>
 $$\omega_2 = 2\ \frac{\textrm{rad}}{\textrm{s}}.$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Készítette:</p>
+
+<pre><code>        Hertelendy Krisztián és Piri Barnabás (Alkalmazott Mechanika Szakosztály) 
+        Takács Dénes (BME MM) kidolgozása és ábrái alapján.
+
+        Hibák, javaslatok:
+        amsz.bme@gmail.com
+
+        2021.03.31.</code></pre>
+
 </div>
 </div>
 </body>
